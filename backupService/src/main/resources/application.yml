@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://backup_db:5432/service02
+    username: postgres
+    password: teach1postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  kafka:
+    consumer:
+      bootstrap-servers: kafka:9092
+      group-id: group_id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+
